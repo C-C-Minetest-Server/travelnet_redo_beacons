@@ -23,6 +23,12 @@ local def = {
     end,
 
     _travelnet_on_teleport = function(travelnet, _, player)
+        -- Prevent slamming onto the ground causing death if teleporting mid-fall
+        -- and other velocity problems.
+        local vel = player:get_velocity()
+        local add_vel = vector.multiply(vel, -1)
+        player:add_velocity(add_vel)
+
         local old_pos = player:get_pos()
         local new_pos = travelnet.pos
 
