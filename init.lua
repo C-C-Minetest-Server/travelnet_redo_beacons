@@ -26,8 +26,6 @@ local def = {
         local old_pos = player:get_pos()
         local new_pos = travelnet.pos
 
-        print(minetest.pos_to_string(old_pos), minetest.pos_to_string(new_pos))
-
         player:set_pos(vector.add(new_pos, vector.new(0, 0.5, 0)))
         player:set_look_vertical(math.pi * 10 / 180) -- don't face down
 
