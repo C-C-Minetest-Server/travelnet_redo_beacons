@@ -7,7 +7,7 @@
 local S = minetest.get_translator("travelnet_redo_beacons")
 
 local def = {
-    description = S("Travelnet Bracon"),
+    description = S("Travelnet Beacon"),
     tiles = { "travelnet_redo_beacons_top.png", "travelnet_redo_beacons_side.png" },
 
     paramtype = "light",
